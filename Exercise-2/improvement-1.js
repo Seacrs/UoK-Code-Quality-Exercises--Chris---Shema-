@@ -1,13 +1,12 @@
 // Function 1
 
-function calculateAverage(numbers) {
-  var sum = 0;
-  var count = 0;
-  for (var i = 0; i < numbers.length; i++) {
-    sum += numbers[i];
-    count++;
-  }
-  var average = sum / count;
-  return average;
-}
+/**
+ * Calculates the average of a list of numbers
+ * @param {number[]} numbers 
+ * @returns {number}
+ */
 
+const calculateAverage = (numbers = []) => {
+    if(numbers.length === 0) return 0;
+    return numbers.reduce((acc, curV)=> acc + curV, 0) / numbers.length;
+}
