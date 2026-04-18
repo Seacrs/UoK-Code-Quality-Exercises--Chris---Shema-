@@ -1,5 +1,8 @@
 // Function 7
 
-function mult(x,y){
-  return x*y;
-}
+/** Multiplies two numbers
+ * @param {number} x 
+ * @param {number} y 
+ * @returns {number}
+ */
+const mult = (x,y) => x * y;

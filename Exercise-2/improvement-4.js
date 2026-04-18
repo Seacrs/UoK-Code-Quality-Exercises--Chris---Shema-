@@ -1,11 +1,7 @@
 // Function 4
 
-function findEvenNumbers(numbers) {
-  var evenNumbers = [];
-  for (var i = 0; i < numbers.length; i++) {
-    if (numbers[i] % 2 === 0) {
-      evenNumbers.push(numbers[i]);
-    }
-  }
-  return evenNumbers;
-}
+/** Finds even numbers in a list of numbers
+ * @param {number[]} numbers
+ * @returns {number[]}
+ */
+const findEvenNumbers = (numbers) => numbers.filter(number => number % 2 === 0);

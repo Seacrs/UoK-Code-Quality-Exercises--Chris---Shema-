@@ -1,9 +1,11 @@
 // Function 3
 
-function reverseString(str) {
-  var reversed = "";
-  for (var i = str.length - 1; i >= 0; i--) {
-    reversed += str[i];
-  }
-  return reversed;
+/**
+ * reverse a string
+ * @param {string} str
+ * @returns {string}
+ */
+const reverseString = (str) => {
+    if(!str) return "Enter a String";
+    return str.split("").reverse().join('');
 }

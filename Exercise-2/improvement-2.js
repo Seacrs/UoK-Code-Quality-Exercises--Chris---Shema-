@@ -1,9 +1,8 @@
 // Function 2
 
-function greet(name) {
-  if (name) {
-    return "Hello, " + name + "!";
-  } else {
-    return "Hello!";
-  }
-}
+/**
+ * Greets user
+ * @param {string} name 
+ * @returns {string}
+ */
+const greet = (name = "guest") => `Hello, ${name}`;
