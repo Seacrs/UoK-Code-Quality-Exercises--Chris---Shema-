@@ -6,3 +6,5 @@
 // The returned format must be correct in order to complete this challenge.
 
 // Don't forget the space after the closing parentheses!
+
+const createPhoneNumber= (numbers)=> numbers.join("").replace(/(\d{3})(\d{3})(\d{4})/, "($1) $2-$3");
