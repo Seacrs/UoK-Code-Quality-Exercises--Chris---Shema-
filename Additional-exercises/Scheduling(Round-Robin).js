@@ -35,3 +35,26 @@
 // roundRobin([10,20,1], 5, 0) == 16
 // **You can assume that the processor can switch jobs between cc so it does not 
 // add to the total time.
+
+function roundRobin(jobs, slice, index){
+    const queue = jobs.map((job, i)=> [job, i]);
+    let time = 0;
+
+    while(queue.length !== 0){
+        time += Math.min(slice, queue[0][0]);
+        queue[0][0] = Math.max(0, queue[0][0] - slice);
+
+        if(queue[0][1] === index && queue[0][0] <= 0){
+            break;
+        }
+
+        if(queue[0][0] !== 0){
+            const removed = queue.shift()
+            queue.push(removed);
+        } else {
+            queue.shift()
+        }
+    }
+
+    return time;
+}
