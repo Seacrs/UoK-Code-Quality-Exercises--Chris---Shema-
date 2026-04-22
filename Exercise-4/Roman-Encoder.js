@@ -36,13 +36,12 @@ function solution(number) {
         500 : "D", 900 :  "CM",  1000 : "M"
     };
 
-    let num = number;
     const keys = Object.keys(symbol).map(Number);
     let roman = "";
 
     for(let i = keys.length - 1; i >= 0 ; i--){
-        while(keys[i] <= num){
-            num -= keys[i];
+        while(keys[i] <= number){
+            number -= keys[i];
             roman += symbol[keys[i]];
         }
     }

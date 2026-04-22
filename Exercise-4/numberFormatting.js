@@ -15,10 +15,10 @@ function numberFormat(number){
         arr.push(str.slice(i, i + 3));
     }
 
-    const result = arr
-        .map(s => s.split("").reverse().join(""))
-        .reverse()
-        .join(",")
+    const result = [];
+    for(let i = arr.length - 1; i >= 0; i-- ){
+        result.push(arr[i].split("").reverse().join(""))
+    }
 
-    return isNegative ? "-" + result : result;
+    return isNegative ? `-${result.join(",")}` : result.join(",");
 }

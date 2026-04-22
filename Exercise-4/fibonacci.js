@@ -6,7 +6,7 @@
  * @returns {number[]}
  */
 function fibonacci(n){
-    if(n > 0) return [];
+    if(n < 0) return [];
     if(n === 0) return [0];
 
     const arr = [0, 1];

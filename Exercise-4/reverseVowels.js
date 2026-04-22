@@ -9,10 +9,9 @@
 // Good luck!
 
 function reverseVowels(str){
-    const VOWELS  = new Set('aeiouAEIOU');
     const vowels = [];
     const arr = str.split("").map(letter => {
-        if(VOWELS.has(letter)){
+        if(/[aeiouAEIOU]/.test(letter)){
             vowels.push(letter);
             return "*"
         }
